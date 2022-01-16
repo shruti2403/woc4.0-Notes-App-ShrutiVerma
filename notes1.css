@@ -6,13 +6,29 @@ h1{
     text-shadow: 3px 3px 5px #333;
     text-decoration-style: wavy;
     text-align:center ;
-    color: rgb(29, 3, 23);
+    color: rgb(24, 3, 19);
 }
 p{ 
     text-align:center ;
-     color: rgb(211, 224, 163);
+    
 }
 body
 {
-    background-color: black;
+    background-color: #eee;
+}
+h3
+{
+    text-align: left;
+     
+}
+p
+{
+    text-align: left;
+    
+}
+.container
+{
+max-width: 900px;
+margin: 0 auto;
+padding: 0 20px;
 }

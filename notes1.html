@@ -7,9 +7,7 @@
     <title>Notes App</title>
     <link rel="stylesheet"  href="./notes1.css"/>
     <style>
-        body{
-            background-color: black;
-        }
+        
         #myheading
         {
             background-color: rgb(219, 19, 152);
@@ -17,8 +15,36 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="Notes">
     <h1 id='myheading'>Notes App</h1>
+    <table>
+    <form action="">
+            <tr>
+    <td><input type="text" id="Title" placeholder="Note" ></td>
+    <td><textarea name="" id="note-text" placeholder="note details"></textarea></td>
+    <td><button id="add">Add note</button></td>
+        </tr>
     
+    </form>
+    </table>
+    </div>
+    </header>
+    <section>
+        <div class="Notes">
+            <h2>Your Notes</h2>
+            <hr>
+            <div id="app">
+                <div id="note">
+                    <p class="note-counter">Note 1</p>
+                    <h3 class="note-title">Hello</h3>
+                    <p class="note-text">Notes</p>
+                    <button class="note-btn">Delete</button>
+                    <button class="note-btn edit-btn">Edit</button>
+                </div>
+            </div>
+        </div>
+    </section>
     
     
 </body>
