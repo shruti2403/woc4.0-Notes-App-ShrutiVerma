@@ -14,7 +14,7 @@ p{
 }
 body
 {
-    background-color: #eee;
+    background-color: rgb(17, 3, 3);
 }
 h3
 {
@@ -26,9 +26,14 @@ p
     text-align: left;
     
 }
-.container
+form input
 {
-max-width: 900px;
-margin: 0 auto;
-padding: 0 20px;
+    width: 200px;
+    column-rule-color: rgb(121, 88, 38);
+}
+form textarea
+{
+    width: 201px;
+    line-height: 130px;
+    
 }
