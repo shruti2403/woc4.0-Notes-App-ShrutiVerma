@@ -36,5 +36,7 @@ form textarea
 {
     width: 201px;
     line-height: 130px;
+    color: aquamarine;
+    color-adjust:red ;
     
 }
