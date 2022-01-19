@@ -54,7 +54,7 @@ form input:focus,form textarea:focus
 {
     outline: 0;
 }
-button
+/* button
 {
     background-color: rgb(25, 22, 182);
     border: 2px solid rgb(25, 22, 182);
@@ -63,7 +63,7 @@ button
     padding: 0.55rem 0;
     cursor:pointer;
 
-}
+} */
 h2
 {
     padding-top: 0.5rem;
