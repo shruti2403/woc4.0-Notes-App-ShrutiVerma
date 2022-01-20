@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes App</title>
     <link rel="stylesheet"  href="./notes1.css"/>
+    <script src="notes1.java"></script>
     <style>
         
         #myheading
@@ -15,13 +16,61 @@
     </style>
 </head>
 <body>
-     <script src="notes1.java"></script>  
-    <header>
+    <div>
+        <h1 class="title" id="myheading">Notes App</h1>
+    </div>
+    <div class="list1" id="list1">
+        <h2 id="">Note-1</h2>
+        <ul>
+            <li>Studies<button id="edit"><i class="bi bi-trash"></i></button></li>
+            <li>Hobbies<button id="edit"><i class="fas fa-trash"></i></button></li>
+        </ul>
+        <div class="button">
+            <button class="Add">Add list</button>
+            <button class="Delete">Delete list</button>
+        </div>
+    </div>
+    <div class="list2" id="list1">
+        <h3 id="">Note-2</h3>
+        <ul>
+            <li>Studies<button id="edit"></button></li>
+            <li>Hobbies</li>
+        </ul>
+        <div class="button">
+            <button class="Add">Add list</button>
+            <button class="Delete">Delete list</button>
+        </div>
+    </div>
+    <button id="add" onclick="add()"><i class=""</button>
+        <i class="fas fa-3x fa-trash"></i>Del
+      
+    <!-- <header>
         <div class="Notes">
     <h1 id='myheading'>Notes App</h1>
     <form action="">
         <table>
             <tr>
+    <td><input type="text" id="Title" placeholder="Title" ></td>
+    <td><h3>Title</h3></td>
+    </tr>
+    <tr>
+    <td><textarea name="" id="note-text" placeholder="Start typing"></textarea></td>
+    <td><p>Here is the content....</p></td>
+</tr>
+<tr>
+    <td><button id="add">Add  </button>
+       
+        <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-trash"></span> Trash 
+          </button></td>
+                </tr>
+   
+
+    </form>
+    <form action="">
+        
+            <tr>
+    <td><input type="text" id="Title" placeholder="Title" ></td>
     <td><input type="text" id="Title" placeholder="Title" ></td>
     
     </tr>
@@ -36,6 +85,7 @@
           </button></td>
                 </tr>
     </table>
+    
     </form>
     
     </div>
@@ -54,7 +104,7 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>  -->
     
     
 </body>

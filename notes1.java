@@ -1,1 +1,1 @@
-console.log("hello world");
+const notelist div= document.queryselector(".h3");
