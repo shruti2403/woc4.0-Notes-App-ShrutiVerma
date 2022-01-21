@@ -10,24 +10,35 @@ h1{
 }
 .list1
 {
-    color: aliceblueSS;
+    accent-color: red;
+    vertical-align: baseline;
+    color: rgb(17, 15, 15);
     border-style: solid;
     border-radius: 8px;
     height: 300px;
     width: 200px;
+    padding-top: 0px;
+    background-color: aqua;
+    
 }
 .list2
 {
-    color: aliceblueSS;
     border-style: solid;
     border-radius: 8px;
     height: 300px;
     width: 200px;
+    padding-top: 0px;
+     background-color: aqua; 
 }
-/
+    
 body
 {
     background-color: rgb(240, 217, 217) ;
+}
+.container
+{
+    display: flex;
+    justify-content: space-around;
 }
 /* h3
 {
@@ -67,9 +78,9 @@ form textarea
     
 }
 form input:focus,form textarea:focus */
-{
+/* {
     outline: 0;
-}
+} */
 /* button
 {
     background-color: rgb(25, 22, 182);
@@ -80,7 +91,7 @@ form input:focus,form textarea:focus */
     cursor:pointer;
 
 } */
-h2
+ h2
 {
     padding-top: 0.5rem;
-}
+} 
