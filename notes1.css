@@ -16,9 +16,9 @@ h1{
     border-style: solid;
     border-radius: 8px;
     height: 300px;
-    width: 200px;
+    width: 250px;
     padding-top: 0px;
-    background-color: aqua;
+    background-color: white;
     
 }
 .list2
@@ -26,19 +26,23 @@ h1{
     border-style: solid;
     border-radius: 8px;
     height: 300px;
-    width: 200px;
+    width: 250px;
     padding-top: 0px;
-     background-color: aqua; 
+     background-color: white; 
 }
     
 body
 {
-    background-color: rgb(240, 217, 217) ;
+    background-color: rgb(12, 11, 11) ;
 }
 .container
 {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
+}
+button
+{
+    color: blue;
 }
 /* h3
 {
