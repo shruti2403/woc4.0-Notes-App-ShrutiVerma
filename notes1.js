@@ -67,21 +67,30 @@
 //   localStorage.setItem("New Todo", JSON.stringify(listArray)); //set the item in localstorage
 //   showTasks(); //call the showTasks function
 // }
- function Add()
+ function add()
  {
-     var list2 =0 document.getElementById("list2");
-     list2.style.display = "inline-block";
-      const x = prompt('Enter Name','Note');
+     var list2 =document.getElementByid("list2");
+     var item1 = prompt("Enter the element")
+     //list2.style.display = "inline-block";
+      //const x = prompt('Enter Name','Note');
       if (x !=null)
      
-          document.getElementById("2").innerHTML = x;
-      
+          var enrty=document.createElement("li")/*.innerHTML = "x"*/;
+          enrty.appendChild(document.createTextNode(Element1));
+          list2.appendChild(enrty);
  }
  function Delete()
  {
-     var list2=document.getElementById("list2");
+     var list2=document.getElementByid("list2");
      list2.style.display="none";
  }
  //static getElementById()
     // let Name = prompt ("What is your name","Guest");
  
+    // var list = document.getElementById('list');
+    // var item1 = window.prompt("Enter first item:");
+    //   if (item1 != null) {
+    //       var entry = document.createElement('li');
+    //       entry.appendChild(document.createTextNode(item1));
+    //       list.appendChild(entry);       
+    // }

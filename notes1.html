@@ -24,6 +24,7 @@
     </style>
 </head>
 <body>
+    
     <div>
         <h1 class="title" id="myheading">Notes App</h1>
     </div>
@@ -32,11 +33,11 @@
     <div class="list1" id="list1">
         <h2 id="myheading">Note-1</h2>
         <ul>
-            <li>Studies<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
+            <li id="list">Studies.................<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
             <li>Hobbies<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
         </ul>
         <div class="button">
-            <button class="Add" id="Add">Add list</button>
+            <button class="Add" id="Add">Add</button>
             <button class="Delete" id="Delete">Delete</button>
         </div>
     </div>
@@ -50,17 +51,25 @@
             <li>Hobbies<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
         </ul>
         <div class="button">
-            <button class="Add">Add list</button>
-            <button class="Delete"></i>Delete list</button>
+            <button class="Add" onclick="Add">Add </button>
+            <button class="Delete"></i>Delete </button>
         </div>
     </div>
     </div>
     
 
     <button id="add" onclick="add()"><i class="fas fa-plus"></i></button>
-        
+    <!-- <button type="button"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>    -->
     
     
+    <!-- <h4>My First JavaScript</h4>
+
+    <button type="button"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
     
+    <p id="demo"></p>    -->
 </body>
 </html>
