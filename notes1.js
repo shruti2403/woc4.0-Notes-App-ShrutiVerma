@@ -1,89 +1,20 @@
-// // getting all required elements
-// const inputBox  = document.querySelector(".inputField list1");
-// const addBtn = document.querySelector(".inputField button");
-// const todoList = document.querySelector(".todoList");
-// const deleteAllBtn = document.querySelector(".footer button");
-
-// // onkeyup event
-// inputBox.onkeyup = ()=>{
-//   let userEnteredValue = inputBox.value; //getting user entered value
-//   if(userEnteredValue.trim() != 0){ //if the user value isn't only spaces
-//     addBtn.classList.add("active"); //active the add button
-//   }else{
-//     addBtn.classList.remove("active"); //unactive the add button
-//   }
-// }
-
-// showTasks(); //calling showTask function
-
-// addBtn.onclick = ()=>{ //when user click on plus icon button
-//   let userEnteredValue = inputBox.value; //getting input field value
-//   let getLocalStorageData = localStorage.getItem("New Todo"); //getting localstorage
-//   if(getLocalStorageData == null){ //if localstorage has no data
-//     listArray = []; //create a blank array
-//   }else{
-//     listArray = JSON.parse(getLocalStorageData);  //transforming json string into a js object
-//   }
-//   listArray.push(userEnteredValue); //pushing or adding new value in array
-//   localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
-//   showTasks(); //calling showTask function
-//   addBtn.classList.remove("active"); //unactive the add button once the task added
-// }
-
-// function showTasks(){
-//   let getLocalStorageData = localStorage.getItem("New Todo");
-//   if(getLocalStorageData == null){
-//     listArray = [];
-//   }else{
-//     listArray = JSON.parse(getLocalStorageData); 
-//   }
-//   const pendingTasksNumb = document.querySelector(".pendingTasks");
-//   pendingTasksNumb.textContent = listArray.length; //passing the array length in pendingtask
-//   if(listArray.length > 0){ //if array length is greater than 0
-//     deleteAllBtn.classList.add("active"); //active the delete button
-//   }else{
-//     deleteAllBtn.classList.remove("active"); //unactive the delete button
-//   }
-//   let newLiTag = "";
-//   listArray.forEach((element, index) => {
-//     newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
-//   });
-//   todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
-//   inputBox.value = ""; //once task added leave the input field blank
-// }
-
-// // delete task function
-// function deleteTask(index){
-//   let getLocalStorageData = localStorage.getItem("New Todo");
-//   listArray = JSON.parse(getLocalStorageData);
-//   listArray.splice(index, 1); //delete or remove the li
-//   localStorage.setItem("New Todo", JSON.stringify(listArray));
-//   showTasks(); //call the showTasks function
-// }
-
-// delete all tasks function
-// deleteAllBtn.onclick = ()=>{
-//   listArray = []; //empty the array
-//   localStorage.setItem("New Todo", JSON.stringify(listArray)); //set the item in localstorage
-//   showTasks(); //call the showTasks function
-// }
- function add()
- {
-     var list2 =document.getElementByid("list2");
-     var item1 = prompt("Enter the element")
-     //list2.style.display = "inline-block";
-      //const x = prompt('Enter Name','Note');
-      if (x !=null)
+//  function add()
+//  {
+//      var list2 =document.getElementByid("list2");
+//      var item1 = prompt("Enter the element")
+//      //list2.style.display = "inline-block";
+//       //const x = prompt('Enter Name','Note');
+//       if (x !=null)
      
-          var enrty=document.createElement("li")/*.innerHTML = "x"*/;
-          enrty.appendChild(document.createTextNode(Element1));
-          list2.appendChild(enrty);
- }
- function Delete()
- {
-     var list2=document.getElementByid("list2");
-     list2.style.display="none";
- }
+//           var enrty=document.createElement("li")/*.innerHTML = "x"*/;
+//           enrty.appendChild(document.createTextNode(Element1));
+//           list2.appendChild(enrty);
+//  }
+//  function Delete()
+//  {
+//      var list2=document.getElementByid("list2");
+//      list2.style.display="none";
+//  }
  //static getElementById()
     // let Name = prompt ("What is your name","Guest");
  
@@ -94,3 +25,72 @@
     //       entry.appendChild(document.createTextNode(item1));
     //       list.appendChild(entry);       
     // }
+const addBtn = document.getElementById("add");
+
+const notes = JSON.parse(localStorage.getItem("container"));
+
+if(container){
+  notes.forEach((note) =>{
+    addNewNote(note);
+  });
+}
+
+addBtn.addEventListener("click", () =>{
+  addNewNote();
+});
+
+function addNewNote(text = ""){
+  const note = document.createElement("div");
+  note.classList.add("note");
+
+  note.innerHTML = `
+    <div class="notes">
+      <div class="tools">
+        <button class="edit"><i class="fas fa-edit"></i></button>
+        <button class="delete"><i class="fas fa-trash-alt"></i></button>
+      </div>
+      <div class="main ${text ? "" : "hidden"}"></div>
+      <textarea class="${text ? "hidden" : ""}"></textarea>
+    </div>
+  `;
+
+  const editBtn = note.querySelector(".edit");
+  const deleteBtn = note.querySelector(".delete");
+
+  const main = note.querySelector(".main");
+  const textArea = note.querySelector("textarea");
+
+  textArea.value = text;
+  main.innerHTML = marked(text);
+
+  editBtn.addEventListener("click", () =>{
+    main.classList.toggle("hidden");
+    textArea.classList.toggle("hidden");
+  });
+
+  deleteBtn.addEventListener("click", () =>{
+    note.remove();
+
+    updateLocalStorage();
+  });
+
+  textArea.addEventListener("input", (e) =>{
+    const { value } = e.target;
+    main.innerHTML = marked(value);
+
+    updateLocalStorage();
+  });
+
+  document.body.appendChild(note);
+}
+
+function updateLocalStorage(){
+  const notesTxt = document.querySelectorAll("textarea");
+  const notes = [];
+
+  notesTxt.forEach((note) => {
+    notes.push(note.value);
+  });
+
+  localStorage.setItem("notes", JSON.stringify(notes));
+}
