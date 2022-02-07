@@ -14,12 +14,19 @@
         
         #myheading
         {
-            background-color: rgb(219, 19, 152);
+background: linear-gradient(90deg, rgba(198,123,18,1) 6%, rgba(10,199,149,1) 75%, rgba(0,212,255,1) 100%);
         }
         #vertical-line{
             width: 1px;
             height: 500px;
         }
+        #add
+        {
+            position: fixed;
+            left: 97%;
+            top: 95%;
+        }
+        
         
     </style>
 </head>
@@ -33,26 +40,26 @@
     <div class="list1" id="list1">
         <h2 id="myheading">Note-1</h2>
         <ul>
-            <li id="list">Studies.................<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
-            <li>Hobbies<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
+            <li id="list">Studies<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
+            <li>Hobbies<button id="Edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
         </ul>
         <div class="button">
-            <button class="Add" id="Add">Add</button>
-            <button class="Delete" id="Delete">Delete</button>
+            <button class="Add" id="Add">Add Task</button>
+            <button class="Delete" id="Delete">Delete List</button>
         </div>
     </div>
    
     
         
     <div class="list2" id="list2">
-        <h3 id="myheading">Note-2</h3>
+        <h2 id="myheading">Note-2</h2>
         <ul>
-            <li>Studies<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
-            <li>Hobbies<button id="edit"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
+            <li>Studies<button id="edit1"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
+            <li>Hobbies<button id="edit2"><i class="fas fa-edit"></i></button><button id="del"><i class="fas fa-trash"></i></button></li>
         </ul>
         <div class="button">
-            <button class="Add" onclick="Add">Add </button>
-            <button class="Delete"></i>Delete </button>
+            <button class="Add" onclick="Add">Add Task</button>
+            <button class="Delete"></i>Delete List</button>
         </div>
     </div>
     </div>
