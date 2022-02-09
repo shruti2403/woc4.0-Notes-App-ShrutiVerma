@@ -8,7 +8,42 @@ h1{
     text-align:center ;
     color: rgb(24, 3, 19);
 }
-.list1
+li
+{
+    text-align: left;
+    padding: 5px;
+}
+.btns
+{
+    position: absolute;
+    top: 270px;
+    width: 240px;
+    align-items: center;
+    background-color: #ffffff;
+}
+.Add
+{
+    border: solid;
+    margin: 2px;
+    font-size: 12px;
+    border-color: rgb(131,184,51);
+    background-color: #ffffff;
+}
+.Add:hover
+{
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(131,184,51);
+}
+.Delete
+{
+    border: solid;
+    margin:2px;
+    font-size: 12px;
+    border-color: red;
+    background-color: #ffffff;
+}
+/* .list1
 {
     accent-color: red;
     vertical-align: baseline;
@@ -30,17 +65,13 @@ h1{
     width: 250px;
     padding-top: 0px;
      background-color: white; 
-}
+} */
     
 body
 {
     background-color:rgb(15, 13, 13) ;
 }
-.container
-{
-    display: flex;
-    justify-content:space-evenly;
-}
+
  h2
 {
     padding-top: 0.5rem;
